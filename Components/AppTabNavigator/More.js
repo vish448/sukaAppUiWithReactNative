@@ -7,9 +7,18 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import {Container, Content, Icon, Thumbnail, Header,Left, Right,Body} from 'native-base';
+import {Container, Content, Thumbnail, Header,Left, Right,Body} from 'native-base';
+
+import Icon from 'react-native-vector-icons/FontAwesome'
+
 
 class More extends Component {
+
+  static navigationOptions = ({
+    tabBarIcon : ({tintColor}) => (
+      <Icon name='ellipsis-h' size={24} style={{color: tintColor}}/>
+    )
+  })
   render() {
     return (
       <Container>

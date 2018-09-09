@@ -10,6 +10,13 @@ import {
 import {Container, Content, Icon, Thumbnail, Header,Left, Right,Body} from 'native-base';
 
 class Messages extends Component {
+
+  static navigationOptions = {
+    tabBarIcon:({tintColor}) => (
+      <Icon name='ios-mail' size={24} style={{color: tintColor}} />
+    )
+  }
+
   render() {
     return (
       <Container>

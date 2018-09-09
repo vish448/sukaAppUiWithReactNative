@@ -7,6 +7,8 @@ import {
   StyleSheet,
 } from 'react-native';
 
+import {Icon} from 'native-base';
+
 import {TabNavigator} from 'react-navigation';
 import Usage from './AppTabNavigator/Usage.js';
 import Billing from './AppTabNavigator/Billing.js';
