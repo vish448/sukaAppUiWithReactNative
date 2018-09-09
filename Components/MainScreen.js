@@ -48,6 +48,15 @@ const AppStackNavigatior = TabNavigator({
   More:{
     screen:More
   }
+},{
+  animationEnabled:true,
+  swipeEnabled:true,
+  tabBarPositions:'Bottom',
+  tabBarOptions: {
+      activeTintColor: '#FBE54D',
+      inactiveTintColor: '#346A72',
+      activeBackgroundColor:'#346A72'
+    },
 })
 
 

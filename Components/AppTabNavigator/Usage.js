@@ -37,11 +37,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   header:{
-    backgroundColor: 'yellow',
+    backgroundColor: '#FBE54D',
   },
   heading:{
     fontSize: 18,
-    fontWeight:'bold'
+    fontWeight:'bold',
+    color:'#346A72'
   },
 
 });
