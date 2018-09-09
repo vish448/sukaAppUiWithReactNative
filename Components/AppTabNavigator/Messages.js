@@ -40,7 +40,8 @@ const styles = StyleSheet.create({
   heading:{
     fontSize: 18,
     fontWeight:'bold',
-    color:'#346A72'
+    color:'#346A72',
+    textTransform: 'uppercase'
   },
 
 });
