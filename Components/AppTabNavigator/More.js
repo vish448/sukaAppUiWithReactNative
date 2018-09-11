@@ -7,7 +7,7 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import {Container, Content, Thumbnail, Header,Left, Right,Body} from 'native-base';
+import {Container, Card, CardItem, Content, Thumbnail, Header,Left, Right,Body} from 'native-base';
 
 import Icon from 'react-native-vector-icons/FontAwesome'
 
@@ -27,9 +27,20 @@ class More extends Component {
         </Header>
         <Content style={styles.outerContent}>
           <Content style={styles.innerContent}>
-            <Left><Text>Test</Text></Left>
-            <Body><Text>I am body</Text></Body>
-            <Right><Text>My Data Bytes His</Text></Right>
+            <Card transparent>
+              <CardItem bordered style={styles.cardItem}>
+                <Icon name='mobile' size={34} style={styles.cardIcon}/>
+                <Body style={styles.cardBody}>
+                  <Text style={styles.cardBodyHeader}>My Data Bytes History</Text>
+                  <Text style={styles.cardBodyContent}>See how many Data Bytes sessions you have left for this month</Text>
+                </Body>
+                <Right style={styles.cardRight}>
+                  <Icon name='angle-right' size={24} />
+                </Right>
+
+
+              </CardItem>
+            </Card>
          </Content>
         </Content>
       </Container>
@@ -61,7 +72,28 @@ const styles = StyleSheet.create({
     height:100,
     backgroundColor: '#FFF',
     borderTopWidth: 5,
-    borderTopColor: '#346A72'
+    borderTopColor: '#346A72',
+  },
+  cardItem:{
+    flex:1,
+    flexDirection: 'row',
+  },
+  cardIcon:{
+    paddingRight: 15,
+    flex:0.3,
+  },
+  cardBody:{
+    width: 400,
+    flex:4,
+  },
+  cardBodyHeader:{
+    fontSize: 18,
+    color: '#346A72',
+    fontWeight: 'bold'
+  },
+  cardRight:{
+    flex:0.2,
   }
+
 
 });
