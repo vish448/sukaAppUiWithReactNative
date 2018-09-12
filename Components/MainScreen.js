@@ -43,7 +43,11 @@ export const MoreStack = StackNavigator({
   MyDataScreen:{
     screen: MyDataScreen,
     navigationOptions: ({navigation}) =>({
-      title:'MyDataScreen'
+      title:'HISTORY',
+      headerStyle: {
+        backgroundColor: '#FBE54D',
+      },
+      headerTintColor: '#346A72',
     })
   }
 });
