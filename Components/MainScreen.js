@@ -9,12 +9,13 @@ import {
 
 import {Icon} from 'native-base';
 
-import {TabNavigator} from 'react-navigation';
+import {TabNavigator, StackNavigator} from 'react-navigation';
 import Usage from './AppTabNavigator/Usage.js';
 import Billing from './AppTabNavigator/Billing.js';
 import Messages from './AppTabNavigator/Messages.js';
 import Support from './AppTabNavigator/Support.js';
 import More from './AppTabNavigator/More.js';
+import MyDataScreen from './Screens/MyDataScreen.js'
 
 
 class MainScreen extends Component {
@@ -32,6 +33,21 @@ class MainScreen extends Component {
 
 export default MainScreen;
 
+export const MoreStack = StackNavigator({
+  More: {
+    screen: More,
+    navigationOptions: ({navigation}) =>({
+      title:'MORE'
+    })
+   },
+  MyDataScreen:{
+    screen: MyDataScreen,
+    navigationOptions: ({navigation}) =>({
+      title:'MyDataScreen'
+    })
+  }
+});
+
 const AppStackNavigatior = TabNavigator({
   Usage:{
     screen:Usage
@@ -46,8 +62,11 @@ const AppStackNavigatior = TabNavigator({
     screen:Support
   },
   More:{
-    screen:More
-  }
+    screen:MoreStack,
+    tabBarIcon : ({tintColor}) => (
+        <Icon name='ellipsis-h' size={24} style={{color: tintColor}}/>
+    )
+  },
 },{
   animationEnabled:true,
   swipeEnabled:true,

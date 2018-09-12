@@ -9,8 +9,9 @@ import {
 
 import {Container, Card, CardItem, Content, Thumbnail, Header,Left, Right,Body} from 'native-base';
 
-import Icon from 'react-native-vector-icons/FontAwesome'
+import { StackNavigator } from 'react-navigation';
 
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 class More extends Component {
 
@@ -19,26 +20,28 @@ class More extends Component {
       <Icon name='ellipsis-h' size={24} style={{color: tintColor}}/>
     )
   })
+
+  segmentClicked = () =>{
+    this.props.navigation.navigate('MyDataScreen');
+    //<View><Text>Test</Text></View>
+    //alert('segment Clicked')
+  }
+
   render() {
     return (
       <Container style={styles.container}>
-        <Header style = {styles.header}>
-          <Body><Text style = {styles.heading}>More</Text></Body>
-        </Header>
         <Content style={styles.outerContent}>
           <Content style={styles.innerContent}>
             <Card transparent>
-              <CardItem bordered style={styles.cardItem}>
+              <CardItem bordered style={styles.cardItem} button onPress={() =>this.segmentClicked()}>
                 <Icon name='mobile' size={34} style={styles.cardIcon}/>
                 <Body style={styles.cardBody}>
                   <Text style={styles.cardBodyHeader}>My Data Bytes History</Text>
                   <Text style={styles.cardBodyContent}>See how many Data Bytes sessions you have left for this month</Text>
                 </Body>
                 <Right style={styles.cardRight}>
-                  <Icon name='angle-right' size={24} />
+                  <Icon name='angle-right' size={24} style={styles.cardRightIcon} />
                 </Right>
-
-
               </CardItem>
             </Card>
          </Content>
@@ -72,7 +75,7 @@ const styles = StyleSheet.create({
     height:100,
     backgroundColor: '#FFF',
     borderTopWidth: 5,
-    borderTopColor: '#346A72',
+    borderTopColor: '#47bcc6',
   },
   cardItem:{
     flex:1,
@@ -81,6 +84,7 @@ const styles = StyleSheet.create({
   cardIcon:{
     paddingRight: 15,
     flex:0.3,
+    color:'#346A72'
   },
   cardBody:{
     width: 400,
@@ -93,7 +97,11 @@ const styles = StyleSheet.create({
   },
   cardRight:{
     flex:0.2,
-  }
+
+  },
+  cardRightIcon:{
+    color:'#346A72'
+  },
 
 
 });
