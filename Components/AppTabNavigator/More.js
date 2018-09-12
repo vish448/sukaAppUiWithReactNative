@@ -16,9 +16,10 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 class More extends Component {
 
   static navigationOptions = ({
-    tabBarIcon : ({tintColor}) => (
-      <Icon name='ellipsis-h' size={24} style={{color: tintColor}}/>
-    )
+    headerStyle: {
+      backgroundColor: '#FBE54D',
+    },
+    headerTintColor: '#346A72',
   })
 
   segmentClicked = () =>{

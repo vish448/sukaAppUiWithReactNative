@@ -63,9 +63,11 @@ const AppStackNavigatior = TabNavigator({
   },
   More:{
     screen:MoreStack,
-    tabBarIcon : ({tintColor}) => (
-        <Icon name='ellipsis-h' size={24} style={{color: tintColor}}/>
-    )
+    navigationOptions: () => ({
+				title: "More",
+				tabBarIcon: ({ tintColor }) =>
+          <Icon name='ios-more' size={24} style={{color: tintColor}} />
+			})
   },
 },{
   animationEnabled:true,
@@ -74,7 +76,8 @@ const AppStackNavigatior = TabNavigator({
   tabBarOptions: {
       activeTintColor: '#FBE54D',
       inactiveTintColor: '#346A72',
-      activeBackgroundColor:'#346A72'
+      activeBackgroundColor:'#346A72',
+      showIcon: true,
     },
 })
 
