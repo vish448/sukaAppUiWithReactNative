@@ -16,6 +16,8 @@ import Messages from './AppTabNavigator/Messages.js';
 import Support from './AppTabNavigator/Support.js';
 import More from './AppTabNavigator/More.js';
 import MyDataScreen from './Screens/MyDataScreen.js'
+import LearnMoreScreen from './Screens/LearnMoreScreen.js'
+import TandCScreen from './Screens/LearnMoreScreen.js'
 
 
 class MainScreen extends Component {
@@ -44,6 +46,26 @@ export const MoreStack = StackNavigator({
     screen: MyDataScreen,
     navigationOptions: ({navigation}) =>({
       title:'HISTORY',
+      headerStyle: {
+        backgroundColor: '#FBE54D',
+      },
+      headerTintColor: '#346A72',
+    })
+  },
+  LearnMoreScreen:{
+    screen: LearnMoreScreen,
+    navigationOptions: ({navigation}) =>({
+      title:'Learn More',
+      headerStyle: {
+        backgroundColor: '#FBE54D',
+      },
+      headerTintColor: '#346A72',
+    })
+  },
+  TandCScreen:{
+    screen: TandCScreen,
+    navigationOptions: ({navigation}) =>({
+      title:'Terms and Conditions',
       headerStyle: {
         backgroundColor: '#FBE54D',
       },

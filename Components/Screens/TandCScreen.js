@@ -9,44 +9,26 @@ import {
 import {Container, Icon, Card, CardItem, Content, Thumbnail, Header,Left, Right,Body} from 'native-base';
 
 
- class MyDataScreen extends Component {
+ class TandCScreen extends Component {
    learnMoreClicked = () =>{
-     this.props.navigation.navigate('LearnMoreScreen');
-   }
-
-   tAndCClicked = () =>{
      this.props.navigation.navigate('TandCScreen');
+
+     //alert('segment Clicked')
    }
   render() {
     return (
 
       <Container style={styles.container}>
           <Content style={styles.innerContent}>
-            <Text>Remaining Data Bytes</Text>
-            <View style={styles.icons}>
-              <Icon style={styles.icon} name='ios-add'/>
-              <Icon style={styles.icon} name='ios-add'/>
-              <Icon style={styles.icon} name='ios-add'/>
-              <Icon style={styles.icon} name='ios-add'/>
-              <Icon style={styles.icon} name='ios-add'/>
-              <Icon style={styles.icon} name='ios-add'/>
-            </View>
-            <Text>You have 5 Data Bytes sessions left</Text>
+            <Text>Terms And Conditions</Text>
         </Content>
-        <Content style={styles.innerContent}>
-          <Text>Data Bytes History</Text>
-          <Text>Data Bytes sessions used during current billing cycle.</Text>
-          <Text>You have 5 Data Bytes sessions left</Text>
-          <Text button onPress={() =>this.learnMoreClicked()}>Learn More</Text>
-          <Text button onPress={() =>this.tAndCClicked()}>Terms and Conditions</Text>
-      </Content>
 
       </Container>
     );
   }
 }
 
-export default MyDataScreen
+export default TandCScreen
 
 
 const styles = StyleSheet.create({
