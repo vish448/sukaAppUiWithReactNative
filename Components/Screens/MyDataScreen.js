@@ -19,29 +19,57 @@ import {Container, Icon, Card, CardItem, Content, Thumbnail, Header,Left, Right,
    }
   render() {
     return (
+       <Container style={styles.container}>
+       <View style={styles.container}>
+       
+        <Text style={{fontSize: 18,fontWeight: 'bold',color: 'red', flex:1}}>Remaining data bytes</Text>
 
-      <Container style={styles.container}>
-          <Content style={styles.innerContent}>
-            <Text>Remaining Data Bytes</Text>
-            <View style={styles.icons}>
-              <Icon style={styles.icon} name='ios-add'/>
-              <Icon style={styles.icon} name='ios-add'/>
-              <Icon style={styles.icon} name='ios-add'/>
-              <Icon style={styles.icon} name='ios-add'/>
-              <Icon style={styles.icon} name='ios-add'/>
-              <Icon style={styles.icon} name='ios-add'/>
-            </View>
-            <Text>You have 5 Data Bytes sessions left</Text>
-        </Content>
-        <Content style={styles.innerContent}>
+        <View style={styles.icons}>
+          <Icon style={styles.icon} name='ios-add'/>
+          <Icon style={styles.icon} name='ios-add'/>
+          <Icon style={styles.icon} name='ios-add'/>
+          <Icon style={styles.icon} name='ios-add'/>
+          <Icon style={styles.icon} name='ios-add'/>
+          <Icon style={styles.icon} name='ios-add'/>
+        </View>
+
+        <Text>You have 5 Data Bytes sessions left</Text>
+        </View>
+        <View style={styles.container}>
           <Text>Data Bytes History</Text>
           <Text>Data Bytes sessions used during current billing cycle.</Text>
           <Text>You have 5 Data Bytes sessions left</Text>
           <Text button onPress={() =>this.learnMoreClicked()}>Learn More</Text>
           <Text button onPress={() =>this.tAndCClicked()}>Terms and Conditions</Text>
-      </Content>
+        </View>
 
-      </Container>
+
+</Container>
+
+      // <Container style={styles.container}>
+      //     <Content style={styles.innerContent}>
+      //       <Text>Remaining Data Bytes</Text>
+      //       <View style={styles.icons}>
+      //         <Icon style={styles.icon} name='ios-add'/>
+      //         <Icon style={styles.icon} name='ios-add'/>
+      //         <Icon style={styles.icon} name='ios-add'/>
+      //         <Icon style={styles.icon} name='ios-add'/>
+      //         <Icon style={styles.icon} name='ios-add'/>
+      //         <Icon style={styles.icon} name='ios-add'/>
+      //       </View>
+      //
+      //     <Content>
+      //
+      //   <Content style={styles.innerContent}>
+      //     <Text>Data Bytes History</Text>
+      //     <Text>Data Bytes sessions used during current billing cycle.</Text>
+      //     <Text>You have 5 Data Bytes sessions left</Text>
+      //     <Text button onPress={() =>this.learnMoreClicked()}>Learn More</Text>
+      //     <Text button onPress={() =>this.tAndCClicked()}>Terms and Conditions</Text>
+      // </Content>
+      //
+      // </Container>
+
     );
   }
 }
@@ -53,7 +81,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#c8f3f4',
-    alignItems: 'center'
+    alignItems:'center',
+    justifyContent: 'flex-start',
+    borderColor: 'red',
+    borderWidth: 2
+
   },
   header:{
     backgroundColor: '#FBE54D',
@@ -72,9 +104,9 @@ const styles = StyleSheet.create({
   },
   innerContent:{
     padding: 20,
-
     borderWidth: 2,
-    borderColor: 'red'
+    borderColor: 'red',
+
   },
   cardItem:{
     flex:1,
