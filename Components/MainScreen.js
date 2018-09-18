@@ -17,7 +17,7 @@ import Support from './AppTabNavigator/Support.js';
 import More from './AppTabNavigator/More.js';
 import MyDataScreen from './Screens/MyDataScreen.js'
 import LearnMoreScreen from './Screens/LearnMoreScreen.js'
-import TandCScreen from './Screens/LearnMoreScreen.js'
+import TandCScreen from './Screens/TandCScreen.js'
 
 
 class MainScreen extends Component {

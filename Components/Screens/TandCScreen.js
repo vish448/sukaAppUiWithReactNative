@@ -10,19 +10,15 @@ import {Container, Icon, Card, CardItem, Content, Thumbnail, Header,Left, Right,
 
 
  class TandCScreen extends Component {
-   learnMoreClicked = () =>{
-     this.props.navigation.navigate('TandCScreen');
-
-     //alert('segment Clicked')
-   }
   render() {
     return (
 
       <Container style={styles.container}>
-          <Content style={styles.innerContent}>
-            <Text>Terms And Conditions</Text>
-        </Content>
-
+          <View style={styles.container1}>
+            <Text style={styles.heading1}>Terms and Conditions</Text>
+            <Text style={styles.desc}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</Text>
+            <Text style={styles.desc}>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </Text>
+          </View>
       </Container>
     );
   }
@@ -35,53 +31,25 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#c8f3f4',
-    alignItems: 'center'
+  },
+  container1: {
+    backgroundColor: '#FFF',
+    alignItems: 'flex-start',
+    margin: 20,
+    borderRadius: 5,
+    padding: 10
   },
   header:{
-    backgroundColor: '#FBE54D',
+    backgroundColor: '#FEE600',
   },
   heading:{
     fontSize: 18,
     fontWeight:'bold',
     color:'#346A72',
-    textTransform: 'uppercase'
+    textTransform: 'uppercase',
   },
-  icons:{
-    flexDirection: 'row',
-  },
-  icon:{
-    padding: 10
-  },
-  innerContent:{
-    padding: 20,
-
-    borderWidth: 2,
-    borderColor: 'red'
-  },
-  cardItem:{
-    flex:1,
-    flexDirection: 'row',
-  },
-  cardIcon:{
-    paddingRight: 15,
-    flex:0.3,
-    color:'#346A72'
-  },
-  cardBody:{
-    width: 400,
-    flex:4,
-  },
-  cardBodyHeader:{
-    fontSize: 18,
-    color: '#346A72',
-    fontWeight: 'bold'
-  },
-  cardRight:{
-    flex:0.2,
-
-  },
-  cardRightIcon:{
-    color:'#346A72'
+  heading1:{
+    fontWeight: 'bold',
   },
 
 

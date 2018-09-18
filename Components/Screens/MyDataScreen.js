@@ -11,10 +11,12 @@ import {Container, Icon, Card, CardItem, Content, Thumbnail, Header,Left, Right,
 
  class MyDataScreen extends Component {
    learnMoreClicked = () =>{
+       alert('learnMoreClicked')
      this.props.navigation.navigate('LearnMoreScreen');
    }
 
    tAndCClicked = () =>{
+     alert('TncClicked')
      this.props.navigation.navigate('TandCScreen');
    }
   render() {
@@ -39,7 +41,7 @@ import {Container, Icon, Card, CardItem, Content, Thumbnail, Header,Left, Right,
             <Text style={styles.smallText}>Data Bytes sessions used during current billing cycle.</Text>
             <Text style={styles.smallText}>You have 6 Data Bytes sessions left</Text>
             <Text style={{marginTop:20,marginButton:0}} button onPress={()=> this.learnMoreClicked()}>Learn More</Text>
-            <Text style={{marginTop:20,marginButton:0}} button onPress={() =>this.tAndCClicked()}>Terms and Conditions</Text>
+            <Text style={{marginTop:20,marginButton:0}} button onPress={()=>this.tAndCClicked()}>Terms and Conditions</Text>
           </View>
 
         </Container>
