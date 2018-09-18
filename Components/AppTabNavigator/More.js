@@ -5,6 +5,7 @@ import {
   View,
   Text,
   StyleSheet,
+  Linking,
 } from 'react-native';
 
 import {Container, Card, CardItem, Content, Thumbnail, Header,Left, Right,Body} from 'native-base';
@@ -33,6 +34,7 @@ class More extends Component {
       <Container style={styles.container}>
         <Content style={styles.outerContent}>
           <Content style={styles.innerContent}>
+
             <Card transparent>
               <CardItem bordered style={styles.cardItem} button onPress={() =>this.segmentClicked()}>
                 <Icon name='mobile' size={34} style={styles.cardIcon}/>
@@ -45,6 +47,20 @@ class More extends Component {
                 </Right>
               </CardItem>
             </Card>
+
+            <Card transparent>
+              <CardItem bordered style={styles.cardItem} button onPress={() =>Linking.openURL( 'http://www.google.com' )}>
+                <Icon name='map-marker' size={34} style={styles.cardIcon}/>
+                <Body style={styles.cardBody}>
+                  <Text style={styles.cardBodyHeader}>Find Us</Text>
+                  <Text style={styles.cardBodyContent}>Find our locations on google</Text>
+                </Body>
+                <Right style={styles.cardRight}>
+                  <Icon name='angle-right' size={24} style={styles.cardRightIcon} />
+                </Right>
+              </CardItem>
+            </Card>
+
          </Content>
         </Content>
       </Container>
@@ -69,11 +85,11 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase'
   },
   outerContent:{
+    flex:1
 
   },
   innerContent:{
     margin: 20,
-    height:100,
     backgroundColor: '#FFF',
     borderTopWidth: 5,
     borderTopColor: '#47bcc6',
