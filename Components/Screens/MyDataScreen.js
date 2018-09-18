@@ -11,12 +11,10 @@ import {Container, Icon, Card, CardItem, Content, Thumbnail, Header,Left, Right,
 
  class MyDataScreen extends Component {
    learnMoreClicked = () =>{
-       alert('learnMoreClicked')
      this.props.navigation.navigate('LearnMoreScreen');
    }
 
    tAndCClicked = () =>{
-     alert('TncClicked')
      this.props.navigation.navigate('TandCScreen');
    }
   render() {
