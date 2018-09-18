@@ -19,10 +19,10 @@ import {Container, Icon, Card, CardItem, Content, Thumbnail, Header,Left, Right,
     return (
 
       <Container style={styles.container}>
-          <Content style={styles.innerContent}>
-            <Text>Learn More Screen</Text>
-        </Content>
-
+          <View style={styles.container1}>
+            <Text style={styles.heading1}>Question 1</Text>
+            <Text style={styles.desc}></Text>
+          </View>
       </Container>
     );
   }
@@ -35,53 +35,26 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#c8f3f4',
-    alignItems: 'center'
+  },
+  container1: {
+    flex: 1,
+    backgroundColor: '#FFF',
+    alignItems: 'flex-start',
+    margin: 20,
+    borderRadius: 5,
+    padding: 10
   },
   header:{
-    backgroundColor: '#FBE54D',
+    backgroundColor: '#FEE600',
   },
   heading:{
     fontSize: 18,
     fontWeight:'bold',
     color:'#346A72',
-    textTransform: 'uppercase'
+    textTransform: 'uppercase',
   },
-  icons:{
-    flexDirection: 'row',
-  },
-  icon:{
-    padding: 10
-  },
-  innerContent:{
-    padding: 20,
-
-    borderWidth: 2,
-    borderColor: 'red'
-  },
-  cardItem:{
-    flex:1,
-    flexDirection: 'row',
-  },
-  cardIcon:{
-    paddingRight: 15,
-    flex:0.3,
-    color:'#346A72'
-  },
-  cardBody:{
-    width: 400,
-    flex:4,
-  },
-  cardBodyHeader:{
-    fontSize: 18,
-    color: '#346A72',
-    fontWeight: 'bold'
-  },
-  cardRight:{
-    flex:0.2,
-
-  },
-  cardRightIcon:{
-    color:'#346A72'
+  heading1:{
+    fontWeight: 'bold',
   },
 
 

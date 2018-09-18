@@ -20,55 +20,29 @@ import {Container, Icon, Card, CardItem, Content, Thumbnail, Header,Left, Right,
   render() {
     return (
        <Container style={styles.container}>
-       <View style={styles.container}>
-       
-        <Text style={{fontSize: 18,fontWeight: 'bold',color: 'red', flex:1}}>Remaining data bytes</Text>
 
-        <View style={styles.icons}>
-          <Icon style={styles.icon} name='ios-add'/>
-          <Icon style={styles.icon} name='ios-add'/>
-          <Icon style={styles.icon} name='ios-add'/>
-          <Icon style={styles.icon} name='ios-add'/>
-          <Icon style={styles.icon} name='ios-add'/>
-          <Icon style={styles.icon} name='ios-add'/>
-        </View>
+         <View style={styles.containerTop}>
+            <Text style={{fontSize: 18,fontWeight: 'bold',color: 'red'}}>Remaining data bytes</Text>
+            <View style={styles.icons}>
+              <Icon style={styles.icon} name='ios-add'/>
+              <Icon style={styles.icon} name='ios-add'/>
+              <Icon style={styles.icon} name='ios-add'/>
+              <Icon style={styles.icon} name='ios-add'/>
+              <Icon style={styles.icon} name='ios-add'/>
+              <Icon style={styles.icon} name='ios-add'/>
+            </View>
+            <Text style={styles.smallText}>You have 6 Data Bytes sessions left</Text>
+          </View>
 
-        <Text>You have 5 Data Bytes sessions left</Text>
-        </View>
-        <View style={styles.container}>
-          <Text>Data Bytes History</Text>
-          <Text>Data Bytes sessions used during current billing cycle.</Text>
-          <Text>You have 5 Data Bytes sessions left</Text>
-          <Text button onPress={() =>this.learnMoreClicked()}>Learn More</Text>
-          <Text button onPress={() =>this.tAndCClicked()}>Terms and Conditions</Text>
-        </View>
+          <View style={styles.containerBottom}>
+            <Text style={styles.smallText}>Data Bytes History</Text>
+            <Text style={styles.smallText}>Data Bytes sessions used during current billing cycle.</Text>
+            <Text style={styles.smallText}>You have 6 Data Bytes sessions left</Text>
+            <Text style={{marginTop:20,marginButton:0}} button onPress={()=> this.learnMoreClicked()}>Learn More</Text>
+            <Text style={{marginTop:20,marginButton:0}} button onPress={() =>this.tAndCClicked()}>Terms and Conditions</Text>
+          </View>
 
-
-</Container>
-
-      // <Container style={styles.container}>
-      //     <Content style={styles.innerContent}>
-      //       <Text>Remaining Data Bytes</Text>
-      //       <View style={styles.icons}>
-      //         <Icon style={styles.icon} name='ios-add'/>
-      //         <Icon style={styles.icon} name='ios-add'/>
-      //         <Icon style={styles.icon} name='ios-add'/>
-      //         <Icon style={styles.icon} name='ios-add'/>
-      //         <Icon style={styles.icon} name='ios-add'/>
-      //         <Icon style={styles.icon} name='ios-add'/>
-      //       </View>
-      //
-      //     <Content>
-      //
-      //   <Content style={styles.innerContent}>
-      //     <Text>Data Bytes History</Text>
-      //     <Text>Data Bytes sessions used during current billing cycle.</Text>
-      //     <Text>You have 5 Data Bytes sessions left</Text>
-      //     <Text button onPress={() =>this.learnMoreClicked()}>Learn More</Text>
-      //     <Text button onPress={() =>this.tAndCClicked()}>Terms and Conditions</Text>
-      // </Content>
-      //
-      // </Container>
+        </Container>
 
     );
   }
@@ -79,13 +53,28 @@ export default MyDataScreen
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#c8f3f4',
     alignItems:'center',
     justifyContent: 'flex-start',
-    borderColor: 'red',
-    borderWidth: 2
-
+  },
+  containerTop:{
+    flex: 0.3,
+    alignItems:'center',
+    justifyContent: 'center',
+    marginTop: 20,
+  },
+  containerBottom: {
+    flex: 1,
+    alignItems:'center',
+    justifyContent: 'flex-start',
+    marginTop: 20,
+    borderTopColor: '#ccc',
+    borderTopWidth: 1,
+    padding: 20
+  },
+  smallText:{
+    fontSize: 15,
+    padding: 15
   },
   header:{
     backgroundColor: '#FBE54D',
