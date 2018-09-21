@@ -37,6 +37,11 @@ class More extends Component {
     this.props.navigation.navigate('TandCScreen');
   }
 
+  sukaFaqsegmentClicked= () =>{
+    alert('faQclicked')
+    this.props.navigation.navigate('faqScreen');
+  }
+
   render() {
     return (
       <Container style={styles.container}>
@@ -109,7 +114,7 @@ class More extends Component {
             </Card>
 
             <Card transparent>
-              <CardItem bordered style={styles.cardItem} button onPress={() =>this.sukaExtrasegmentClicked()}>
+              <CardItem bordered style={styles.cardItem} button onPress={() =>this.sukaFaqsegmentClicked()}>
                 <Icon name='question' size={34} style={styles.cardIcon}/>
                 <Body style={styles.cardBody}>
                   <Text style={styles.cardBodyHeader}>Faq</Text>

@@ -18,6 +18,8 @@ import More from './AppTabNavigator/More.js';
 import MyDataScreen from './Screens/MyDataScreen.js'
 import LearnMoreScreen from './Screens/LearnMoreScreen.js'
 import TandCScreen from './Screens/TandCScreen.js'
+import faqScreen from './Screens/faqScreen.js'
+
 
 
 class MainScreen extends Component {
