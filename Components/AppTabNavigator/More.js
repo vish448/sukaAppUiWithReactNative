@@ -29,6 +29,14 @@ class More extends Component {
     //alert('segment Clicked')
   }
 
+  sukaExtrasegmentClicked = () => {
+    this.props.navigation.navigate('MyDataScreen');
+  }
+
+  tAndCClicked = () =>{
+    this.props.navigation.navigate('TandCScreen');
+  }
+
   render() {
     return (
       <Container style={styles.container}>
@@ -54,6 +62,58 @@ class More extends Component {
                 <Body style={styles.cardBody}>
                   <Text style={styles.cardBodyHeader}>Find Us</Text>
                   <Text style={styles.cardBodyContent}>Find our locations on google</Text>
+                </Body>
+                <Right style={styles.cardRight}>
+                  <Icon name='angle-right' size={24} style={styles.cardRightIcon} />
+                </Right>
+              </CardItem>
+            </Card>
+
+            <Card transparent>
+              <CardItem bordered style={styles.cardItem} button onPress={() =>this.sukaExtrasegmentClicked()}>
+                <Icon name='gift' size={34} style={styles.cardIcon}/>
+                <Body style={styles.cardBody}>
+                  <Text style={styles.cardBodyHeader}>SukaExtra - NEW!</Text>
+                  <Text style={styles.cardBodyContent}>New perks everyWeek</Text>
+                </Body>
+                <Right style={styles.cardRight}>
+                  <Icon name='angle-right' size={24} style={styles.cardRightIcon} />
+                </Right>
+              </CardItem>
+            </Card>
+
+            <Card transparent>
+              <CardItem bordered style={styles.cardItem} button onPress={() =>this.sukaExtrasegmentClicked()}>
+                <Icon name='user' size={34} style={styles.cardIcon}/>
+                <Body style={styles.cardBody}>
+                  <Text style={styles.cardBodyHeader}>Profile & Settings</Text>
+                  <Text style={styles.cardBodyContent}>Update the profile Info</Text>
+                </Body>
+                <Right style={styles.cardRight}>
+                  <Icon name='angle-right' size={24} style={styles.cardRightIcon} />
+                </Right>
+              </CardItem>
+            </Card>
+
+            <Card transparent>
+              <CardItem bordered style={styles.cardItem} button onPress={()=>this.tAndCClicked()}>
+                <Icon name='asterisk' size={34} style={styles.cardIcon}/>
+                <Body style={styles.cardBody}>
+                  <Text style={styles.cardBodyHeader}>Terms & Conditions</Text>
+                  <Text style={styles.cardBodyContent}>Our temrms, coditions and policies</Text>
+                </Body>
+                <Right style={styles.cardRight}>
+                  <Icon name='angle-right' size={24} style={styles.cardRightIcon} />
+                </Right>
+              </CardItem>
+            </Card>
+
+            <Card transparent>
+              <CardItem bordered style={styles.cardItem} button onPress={() =>this.sukaExtrasegmentClicked()}>
+                <Icon name='question' size={34} style={styles.cardIcon}/>
+                <Body style={styles.cardBody}>
+                  <Text style={styles.cardBodyHeader}>Faq</Text>
+                 <Text style={styles.cardBodyContent}>Frequently asked questions</Text>
                 </Body>
                 <Right style={styles.cardRight}>
                   <Icon name='angle-right' size={24} style={styles.cardRightIcon} />
@@ -108,9 +168,14 @@ const styles = StyleSheet.create({
     flex:4,
   },
   cardBodyHeader:{
-    fontSize: 18,
+    fontSize: 16,
     color: '#346A72',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    textTransform: 'uppercase',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex:1
+
   },
   cardRight:{
     flex:0.2,
