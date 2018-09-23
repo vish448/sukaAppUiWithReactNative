@@ -5,19 +5,32 @@ import {
   View,
   Text,
   StyleSheet,
+  ScrollView,
 } from 'react-native';
 import {Container, Icon, Card, CardItem, Content, Thumbnail, Header,Left, Right,Body} from 'native-base';
 
 
- class faqScreen extends Component {
+class faqScreen extends Component {
   render() {
     return (
-
       <Container style={styles.container}>
           <View style={styles.container1}>
-            <Text style={styles.heading1}>Terms and Conditions</Text>
-            <Text style={styles.desc}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</Text>
-            <Text style={styles.desc}>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </Text>
+          <ScrollView
+            showsVerticalScrollIndicator={false}>
+            <Text style={styles.heading1}>Frequently Asked Questions</Text>
+            <Text>{'\n'}</Text>
+            <Text style={styles.heading1}>Answer 1</Text>
+            <Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</Text>
+            <Text>{'\n'}</Text>
+            <Text style={styles.heading1}>Answer 2</Text>
+            <Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</Text>
+            <Text>{'\n'}</Text>
+            <Text style={styles.heading1}>Answer 3</Text>
+            <Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</Text>
+            <Text>{'\n'}</Text>
+            <Text style={styles.heading1}>Answer 4</Text>
+            <Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</Text>
+            </ScrollView>
           </View>
       </Container>
     );
@@ -25,7 +38,6 @@ import {Container, Icon, Card, CardItem, Content, Thumbnail, Header,Left, Right,
 }
 
 export default faqScreen
-
 
 const styles = StyleSheet.create({
   container: {
@@ -51,6 +63,5 @@ const styles = StyleSheet.create({
   heading1:{
     fontWeight: 'bold',
   },
-
 
 });

@@ -38,7 +38,6 @@ class More extends Component {
   }
 
   sukaFaqsegmentClicked= () =>{
-    alert('faQclicked')
     this.props.navigation.navigate('faqScreen');
   }
 

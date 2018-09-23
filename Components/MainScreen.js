@@ -73,7 +73,18 @@ export const MoreStack = StackNavigator({
       },
       headerTintColor: '#346A72',
     })
+  },
+  faqScreen:{
+    screen: faqScreen,
+    navigationOptions: ({navigation}) =>({
+      title:'Faq',
+      headerStyle: {
+        backgroundColor: '#FBE54D',
+      },
+      headerTintColor: '#346A72',
+    })
   }
+
 });
 
 const AppStackNavigatior = TabNavigator({
