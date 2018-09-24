@@ -37,9 +37,14 @@ class More extends Component {
     this.props.navigation.navigate('TandCScreen');
   }
 
-  sukaFaqsegmentClicked= () =>{
+  sukaFaqsegmentClicked = () =>{
     this.props.navigation.navigate('faqScreen');
   }
+
+  sukaExtrasegmentClicked = () =>{
+    this.props.navigation.navigate('ExtrasScreen');
+  }
+
 
   render() {
     return (

@@ -19,6 +19,7 @@ import MyDataScreen from './Screens/MyDataScreen.js'
 import LearnMoreScreen from './Screens/LearnMoreScreen.js'
 import TandCScreen from './Screens/TandCScreen.js'
 import faqScreen from './Screens/faqScreen.js'
+import ExtrasScreen from './Screens/ExtrasScreen.js'
 
 
 
@@ -78,6 +79,16 @@ export const MoreStack = StackNavigator({
     screen: faqScreen,
     navigationOptions: ({navigation}) =>({
       title:'Faq',
+      headerStyle: {
+        backgroundColor: '#FBE54D',
+      },
+      headerTintColor: '#346A72',
+    })
+  },
+  ExtrasScreen:{
+    screen: ExtrasScreen,
+    navigationOptions: ({navigation}) =>({
+      title:'Suka Extras',
       headerStyle: {
         backgroundColor: '#FBE54D',
       },
